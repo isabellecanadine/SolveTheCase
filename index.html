@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+<title>Solve The Case!</title>
+   <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+ <div id = "content">
+<h1>Welcome, Detective!</h1>
+<center>
+
+   <script>
+
+   window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("myForm").addEventListener("submit", e => {
+    const form = e.target;
+    const name = document.getElementById('tbName').value;
+    sessionStorage.setItem('userName', name);
+  })
+})
+   </script>
+  
+  <form action="action.html" id="myForm">
+   <p>Enter Your Name To Sign-In:</p>
+   <input id="tbName" type="text" class="box">
+   <button type="submit" class="p3">BEGIN INVESTIGATING</button>
+ </form>
+   
+</center>
+
+</div> 
+</body>
+</html>

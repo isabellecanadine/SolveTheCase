@@ -1,0 +1,411 @@
+
+<head>
+<title>Solve The Case!</title>
+   <link rel="stylesheet" href="style.css"> 
+</head>
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('welcome').textContent = `Welcome, Detective ${ sessionStorage.getItem('userName') || "stranger"}`;
+
+})
+
+</script>
+
+<p id="welcome" class="welcome"></p>
+
+  <div class="popup">
+
+    <div class="tooltip">
+      <img src="alert.png" alt="buttonpng" border="0" class="new-case" onclick="myFunction()"/>
+      </button>
+      <span class="tooltiptext">YOU HAVE A NEW CASE! CLICK THE ALERT TO LEARN MORE!</span>
+   </div>
+   <script>
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
+    <span class="popuptext" id="myPopup">
+    
+      <div class="container">
+        <img src="folder.png" alt="Folder" style="width:100%"/>
+        <p class="people">Important <br> Persons</p>
+        <button class="btn"><img src="dylan.png" alt="Dylan Conaway" style="width:100px"/><br><br>Dylan Conaway</button>
+        
+        <div class="content1">
+          <p class="handwriting"><font size="3" color="black"><br><br><br>
+      
+            Sources have said that the victim had sexual relations with the suspect.
+            <br>
+            <br>
+            Suspect is being investigated alongside his brother, Darek Conaway.
+            <br>
+            <br>
+            Leading detectives have previously investigated suspect and brother in bank robbery case.
+            <br>
+            <br>
+            Darek Conaway has been indicted on five counts of third-degree sexual assault. Dylan Conaway is under investigation for involvement.
+            <br>
+            <br>
+            Brothers have been seen at multiple social gatherings with the victim, even providing transportation for the young girl.
+            <br>
+            <br>
+            Insight into the depth of the relationship between the victim and the Conaway brothers is needed ASAP.
+          </font> 
+          </p>
+          
+          <button class="btn6" style="vertical-align:middle" onclick="document.location='puzzleone.html'"><span>Review Evidence </span></button> 
+          <div class="puzzle1">
+
+            
+          </div>
+        </div>
+
+        <button class="btn2"><img src="shania.jpeg" alt="Shania Ammons" style="width:100px"/><br><br>Shania Ammons</button>
+        
+        <div class="content20">
+          <p class="handwriting"><font size="4" color="black"><br><br><br>
+            In love with Shelia Eddy.
+            <br>
+            <br>
+            Supposedly a best friend of Skylar Neese.
+            <br>
+            <br>
+            Contradicts kind-worded messages about the victim, with negative statements about the victim’s family.
+            <br>
+            <br>
+            Confidential sources state that, in one instance, Shania claimed she wanted to see the victim physically assaulted.
+            <br>
+            <br>
+            Claims to use narcotics on multiple occasions.
+            <br>
+            <br>
+            Claims to have alibi for the night that the victim went missing.
+          </font>
+          </p>
+
+          <button class="btn7" style="vertical-align:middle" onclick="document.location='puzzletwo.html'"><span>Review Evidence </span></button>
+          <div class="puzzle2">
+            
+          </div>
+        </div>
+
+        <button class="btn3"><img src="shelia.png" alt="Shelia Eddy" style="width:100px"/><br><br>Shelia Eddy</button>
+        
+        <div class="content3">
+          <p class="handwriting"><font size="4" color="black"><br><br><br>
+            
+            One of Skylar’s best friends, Shelia Rae, as her family calls her, is an only child.
+            <br>
+            <br>
+            The father of the victim called suspect on the night of disappearance to question if she had been in contact with the victim. she admitted to having talked to Skylar on the phone around midnight, but hadn't seen her. 
+            <br>
+            <br>
+            Sources have stated that suspect is intelligent and well liked.
+            <br>
+            <br>
+            Suspect is an honors student at UHS.
+            <br>
+            <br>
+            Suspect seemed more curious about the investigation than worried about her missing friend.
+            </font>
+          </p>
+          
+          <button class="btn8" style="vertical-align:middle" onclick="document.location='puzzlethree.html'"><span>Review Evidence </span></button>
+          <div class="puzzle3">
+            
+          </div>
+        </div>
+        
+        <button class="btn5"><img src="rachel.jpeg" alt="Rachel Shoaf" style="width:100px"/><br><br>Rachel Shoaf</button>
+        
+        <div class="content4">
+          
+          <p class="handwriting"><font size="3" color="black"><br><br><br>
+           
+            Sources have stated that suspect made several negative comments during class period, about how the high levels of hatred they felt towards the victim.
+            <br>
+            <br>
+            Suspect has strong relationship with other suspect, Shelia Eddy.
+            <br>
+            <br>
+            One source states that “Rachel was the first person to defend (weaker) kids and wouldn’t let anyone be mean to them.” 
+            <br>
+            <br>
+            Suspect is known to have money, and her parents are considered more white-collar workers than blue-collar.
+            <br>
+            <br>
+            Suspect is known for her staunch Catholic faith and her volunteer work during Special Olympics.
+            <br>
+            <br>
+            Suspect is an Honors student as UHS and participates in singing extracurricular, seemingly the most talented in her class.
+          
+          </font>
+          </p>
+
+          <button class="btn9" style="vertical-align:middle" onclick="document.location='puzzlefour.html'"><span>Review Evidence </span></button>
+          <div class="puzzle4">
+            
+          </div>
+        </div>
+
+        <script>
+          var coll = document.getElementsByClassName("btn");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+          
+          var coll = document.getElementsByClassName("btn2");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+          
+          var coll = document.getElementsByClassName("btn3");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+          
+          var coll = document.getElementsByClassName("btn5");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+
+          var coll = document.getElementsByClassName("btn6");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+
+          var coll = document.getElementsByClassName("btn7");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+
+          var coll = document.getElementsByClassName("btn8");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+
+          var coll = document.getElementsByClassName("btn9");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+
+          </script>
+        
+        <img class ="skylar" src="skylar.jpeg" alt="Skylar Neese"/>
+        <p class="girl">Name - Skylar Neese <br> Age - 16 Years<br> Gender - Female <br> COD - Stabbing</p>
+        <img class ="bodies" src="missing.png" alt="Missing Poster"/>
+        <img class ="murder" src="mysterycar.jpeg" alt="Mystery Car"/>
+        <p class="people2"><br>Skylar is seen getting into an unknown vehicle at 12:31 am on July 6.</p>
+      </div>
+
+    </span>
+  </div>
+
+      <br>
+      <br>
+    <div class="float-parent-element">
+        <div class="float-child-element">
+        <div class="red">
+         <a target="_blank" href="https://www.wvsp.gov/Pages/default.aspx"><img src="police.png" alt="West Virginia Police." class= "police" /></a>
+        </div>
+
+  
+
+  <br>
+      <p class= "p2"> WEST VIRGINIA POLICE DEPARTMENT</p>
+      <div class="float-child-element">
+        <div class="yellow">
+<button type="button" class="collapsible"><img src="notepad.png" alt="Notepad"/></button>
+
+<div class="content2">
+  
+  <script>
+    function load_text() {
+      document.getElementById("output").value = "This is your notepad! You will use it to keep track of the information you collect, which will help you to solve the case!";
+    }
+
+    function bold_click() {
+      document.getElementById("output").style.fontWeight = "bold";
+    }
+
+    function underline_click() {
+      document.getElementById("output").style.textDecoration = "underline";
+    }
+
+    function italic_click() {
+      document.getElementById("output").style.fontStyle = "italic";
+    }
+
+  </script>
+
+
+<body onload="load_text()">
+
+<br/>
+
+<form name="controls" id="controls">
+  
+</select>
+
+<input id="button1" type="button" value="B" name="button1" style="font-weight: bold; width: 26px; height: 24px" size="28" onclick="bold_click()">
+
+    <input type="button" value="i" style="width: 25px; font-style: italic; height: 24px" size="30" onclick="italic_click()">
+
+    <input id="button1" style="width: 26px; height: 24px; text-decoration: underline" type="button" size="8" value="u" name="button1" onclick="underline_click()">
+
+    <input id="button1" style="width: 26px; height: 24px;" type="button" size="8" value="n" name="button1" onclick="normal_click()">
+
+<br/>
+<br/>
+
+     <textarea style="width: 399px; height: 182px" id="output" name="output" rows="9" wrap="virtual" cols=48></textarea><br>
+
+     <p><input type="reset" value="clear"></p>
+  
+    </form>
+</body>
+</div> 
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+
+    .collapsible {
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      font-size: 15px;
+      margin-left: 20px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: rgba(173, 216, 230, 0.566);
+      width: fit-content;
+      
+    }
+    
+    .content2 {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+      width: fit-content;
+      margin-left: -420px;
+      margin-top: -105px;
+      background-attachment: initial ;
+    }
+    </style>
+    
+    <script>
+    
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+  
+
+  </body>
+
+</html>
